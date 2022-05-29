@@ -4,6 +4,12 @@ import 'package:just_audio/just_audio.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  void playSound(String animalName) {
+    final player = AudioPlayer();
+    player.setAsset('assets/animalSound/$animalName.wav');
+    player.play();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,9 +35,7 @@ class MyApp extends StatelessWidget {
                             MaterialStateProperty.all(Colors.green[100]),
                       ),
                       onPressed: () {
-                        final player = AudioPlayer();
-                        player.setAsset('assets/animalSound/bird.wav');
-                        player.play();
+                        playSound("bird");
                       },
                       child: ImageIcon(
                         AssetImage("assets/bird.png"),
@@ -47,9 +51,7 @@ class MyApp extends StatelessWidget {
                             MaterialStateProperty.all(Colors.green[100]),
                       ),
                       onPressed: () {
-                        final player = AudioPlayer();
-                        player.setAsset('assets/animalSound/duck.wav');
-                        player.play();
+                        playSound("duck");
                       },
                       child: ImageIcon(
                         AssetImage("assets/duck.png"),
@@ -72,9 +74,7 @@ class MyApp extends StatelessWidget {
                             MaterialStateProperty.all(Colors.green[100]),
                       ),
                       onPressed: () {
-                        final player = AudioPlayer();
-                        player.setAsset('assets/animalSound/cat.wav');
-                        player.play();
+                        playSound("cat");
                       },
                       child: ImageIcon(
                         AssetImage("assets/cat.png"),
@@ -90,9 +90,7 @@ class MyApp extends StatelessWidget {
                             MaterialStateProperty.all(Colors.green[100]),
                       ),
                       onPressed: () {
-                        final player = AudioPlayer();
-                        player.setAsset('assets/animalSound/dog.wav');
-                        player.play();
+                        playSound("dog");
                       },
                       child: ImageIcon(
                         AssetImage("assets/dog.png"),
@@ -115,9 +113,7 @@ class MyApp extends StatelessWidget {
                             MaterialStateProperty.all(Colors.green[100]),
                       ),
                       onPressed: () {
-                        final player = AudioPlayer();
-                        player.setAsset('assets/animalSound/chicken.wav');
-                        player.play();
+                        playSound("chicken");
                       },
                       child: ImageIcon(
                         AssetImage("assets/chicken.png"),
@@ -133,9 +129,7 @@ class MyApp extends StatelessWidget {
                             MaterialStateProperty.all(Colors.green[100]),
                       ),
                       onPressed: () {
-                        final player = AudioPlayer();
-                        player.setAsset('assets/animalSound/rooster.wav');
-                        player.play();
+                        playSound("rooster");
                       },
                       child: ImageIcon(
                         AssetImage("assets/rooster.png"),
@@ -158,9 +152,7 @@ class MyApp extends StatelessWidget {
                             MaterialStateProperty.all(Colors.green[100]),
                       ),
                       onPressed: () {
-                        final player = AudioPlayer();
-                        player.setAsset('assets/animalSound/horse.wav');
-                        player.play();
+                        playSound("horse");
                       },
                       child: ImageIcon(
                         AssetImage("assets/horse.png"),
@@ -176,9 +168,7 @@ class MyApp extends StatelessWidget {
                             MaterialStateProperty.all(Colors.green[100]),
                       ),
                       onPressed: () {
-                        final player = AudioPlayer();
-                        player.setAsset('assets/animalSound/elephant.wav');
-                        player.play();
+                        playSound("elephant");
                       },
                       child: ImageIcon(
                         AssetImage("assets/elephant.png"),
@@ -201,9 +191,7 @@ class MyApp extends StatelessWidget {
                             MaterialStateProperty.all(Colors.green[100]),
                       ),
                       onPressed: () {
-                        final player = AudioPlayer();
-                        player.setAsset('assets/animalSound/lion.wav');
-                        player.play();
+                        playSound("tiger");
                       },
                       child: ImageIcon(
                         AssetImage("assets/tiger.png"),
@@ -219,9 +207,7 @@ class MyApp extends StatelessWidget {
                             MaterialStateProperty.all(Colors.green[100]),
                       ),
                       onPressed: () {
-                        final player = AudioPlayer();
-                        player.setAsset('assets/animalSound/tiger.wav');
-                        player.play();
+                        playSound("lion");
                       },
                       child: ImageIcon(
                         AssetImage("assets/lion.png"),
