@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Text("Animal Sound"),
+          backgroundColor: Color.fromRGBO(70, 91, 148, 1),
+          title: const Text("Animal Sound"),
           centerTitle: true,
         ),
         body: Column(
