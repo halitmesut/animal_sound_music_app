@@ -10,6 +10,24 @@ class MyApp extends StatelessWidget {
     player.play();
   }
 
+  Expanded buildKey({required String animalName}) {
+    return Expanded(
+      child: TextButton(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(Colors.green[100]),
+        ),
+        onPressed: () {
+          playSound(animalName);
+        },
+        child: ImageIcon(
+          AssetImage("assets/$animalName.png"),
+          color: Color(0xFF3A5A98),
+          size: 70,
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,38 +46,8 @@ class MyApp extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Expanded(
-                    child: TextButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green[100]),
-                      ),
-                      onPressed: () {
-                        playSound("bird");
-                      },
-                      child: ImageIcon(
-                        AssetImage("assets/bird.png"),
-                        color: Color(0xFF3A5A98),
-                        size: 70,
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: TextButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green[100]),
-                      ),
-                      onPressed: () {
-                        playSound("duck");
-                      },
-                      child: ImageIcon(
-                        AssetImage("assets/duck.png"),
-                        color: Color(0xFF3A5A98),
-                        size: 90,
-                      ),
-                    ),
-                  ),
+                  buildKey(animalName: "bird"),
+                  buildKey(animalName: "duck"),
                 ],
               ),
             ),
@@ -67,38 +55,8 @@ class MyApp extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Expanded(
-                    child: TextButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green[100]),
-                      ),
-                      onPressed: () {
-                        playSound("cat");
-                      },
-                      child: ImageIcon(
-                        AssetImage("assets/cat.png"),
-                        color: Color(0xFF3A5A98),
-                        size: 70,
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: TextButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green[100]),
-                      ),
-                      onPressed: () {
-                        playSound("dog");
-                      },
-                      child: ImageIcon(
-                        AssetImage("assets/dog.png"),
-                        color: Color(0xFF3A5A98),
-                        size: 70,
-                      ),
-                    ),
-                  ),
+                  buildKey(animalName: "cat"),
+                  buildKey(animalName: "dog"),
                 ],
               ),
             ),
@@ -106,38 +64,8 @@ class MyApp extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Expanded(
-                    child: TextButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green[100]),
-                      ),
-                      onPressed: () {
-                        playSound("chicken");
-                      },
-                      child: ImageIcon(
-                        AssetImage("assets/chicken.png"),
-                        color: Color(0xFF3A5A98),
-                        size: 70,
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: TextButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green[100]),
-                      ),
-                      onPressed: () {
-                        playSound("rooster");
-                      },
-                      child: ImageIcon(
-                        AssetImage("assets/rooster.png"),
-                        color: Color(0xFF3A5A98),
-                        size: 70,
-                      ),
-                    ),
-                  ),
+                  buildKey(animalName: "chicken"),
+                  buildKey(animalName: "rooster"),
                 ],
               ),
             ),
@@ -145,38 +73,8 @@ class MyApp extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Expanded(
-                    child: TextButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green[100]),
-                      ),
-                      onPressed: () {
-                        playSound("horse");
-                      },
-                      child: ImageIcon(
-                        AssetImage("assets/horse.png"),
-                        color: Color(0xFF3A5A98),
-                        size: 70,
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: TextButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green[100]),
-                      ),
-                      onPressed: () {
-                        playSound("elephant");
-                      },
-                      child: ImageIcon(
-                        AssetImage("assets/elephant.png"),
-                        color: Color(0xFF3A5A98),
-                        size: 70,
-                      ),
-                    ),
-                  ),
+                  buildKey(animalName: "horse"),
+                  buildKey(animalName: "elephant"),
                 ],
               ),
             ),
@@ -184,38 +82,8 @@ class MyApp extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Expanded(
-                    child: TextButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green[100]),
-                      ),
-                      onPressed: () {
-                        playSound("tiger");
-                      },
-                      child: ImageIcon(
-                        AssetImage("assets/tiger.png"),
-                        color: Color(0xFF3A5A98),
-                        size: 70,
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: TextButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.green[100]),
-                      ),
-                      onPressed: () {
-                        playSound("lion");
-                      },
-                      child: ImageIcon(
-                        AssetImage("assets/lion.png"),
-                        color: Color(0xFF3A5A98),
-                        size: 70,
-                      ),
-                    ),
-                  ),
+                  buildKey(animalName: "tiger"),
+                  buildKey(animalName: "lion"),
                 ],
               ),
             ),
